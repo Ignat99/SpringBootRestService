@@ -11,6 +11,7 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <jacoco-plugin.version>0.8.2</jacoco-plugin.version>
     </properties>
 
     <parent>
@@ -65,6 +66,102 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <argLine>${jacocoArgLine} -Xmx4048m -XX:MaxPermSize=512m</argLine>
+                    <includes>
+                        <include>**/*Test.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>${jacoco-plugin.version}</version>
+                <configuration>
+                    <output>file</output>
+                    <append>true</append>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>jacoco-site</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                        <configuration>
+                            <propertyName>jacocoArgLine</propertyName>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>jacoco-check</id>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                status
+                                <rule>
+                                    <element>CLASS</element>
+                                    <limits>
+
+                                        <limit>
+                                            <counter>BRANCH</counter>
+                                            <value>COVEREDRATIO</value>
+                                            <minimum>1.00</minimum>
+                                        </limit>
+
+                                        <limit>
+                                            <counter>LINE</counter>
+                                            <value>COVEREDRATIO</value>
+                                            <minimum>1.00</minimum>
+                                        </limit>
+
+                                        <limit>
+                                            <counter>METHOD</counter>
+                                            <value>COVEREDRATIO</value>
+                                            <minimum>1.00</minimum>
+                                        </limit>
+                                    </limits>
+                                    <excludes>
+                                        <!-- Application -->
+                                        <exclude>springbootrestservice.Application</exclude>
+
+                                        <!-- Configuration Classes -->
+                                        <exclude>springbootrestservice.config.*</exclude>
+
+                                        <!-- Exceptions -->
+                                        <exclude>springbootrestservice.exceptions.*</exclude>
+
+                                        <!-- Domains Classes that don't have relevante code -->
+                                        <!-- Account Relevant Code is Testes -->
+                                        <exclude>springbootrestservice.model.*</exclude>
+
+                                        <!-- Request and Response DTOs -->
+                                        <exclude>springbootrestservice.rest.request.*</exclude>
+                                        <exclude>springbootrestservice.rest.response.*</exclude>
+
+                                        <!-- Validation Annotation -->
+                                        <exclude>springbootrestservice.rest.validators.NotSameAccount</exclude>
+
+                                    </excludes>
+                                </rule>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 
