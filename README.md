@@ -15,8 +15,11 @@ This is a Spring Boot REST API with Swagger Documentation that uses Transactions
 
 Should	be	able	to	
 
-- create	
+- create:	
 
+```sh
+curl -i -X POST -H "Content-Type:application/json" -d '{"number":30000,"name":"Dima","currentBalance":1000.00,"treasury":true}' http://localhost:8080/accounts
+```
 - access:	
 
 ```sh
