@@ -54,11 +54,21 @@ First, you have to generate the `jar` with `mvn`:
 ```sh
 $ mvn clean install
 ```
+or 
+
+```sh
+$ mvn package
+```
 
 You are ready to run with the command:
 
 ```sh
 $ mvn springboot:run
+```
+or
+
+```sh
+$ cd target/ && java -jar SpringBootRestService-1.0.jar
 ```
 
 The program will start embedded tomcat at port 8080, so you can now navigate to [Swagger UI](http://localhost:8080/swagger-ui.html)
@@ -74,7 +84,7 @@ I tried to focus on the application *CORE BUSINESS*, so not all the classes were
 
 ## Non-Tested Classes
 1. `Exceptions` were not tested.
-2. `SpringBootRestService` was nos tested
+2. ` Application.java` was nos tested
 3. `JpaConfiguration` and `SwaggerConfig` were not tested 
 3. `model` package was not tested, but the `Account` class was, because of the business logic methods
 4. `DTOs` inside of `request` and `response` packages were not tested
