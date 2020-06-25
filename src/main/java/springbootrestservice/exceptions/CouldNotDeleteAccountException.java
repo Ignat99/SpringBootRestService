@@ -1,0 +1,9 @@
+package springbootrestservice.exceptions;
+
+public class CouldNotDeleteAccountException extends RuntimeException {
+
+    public CouldNotDeleteAccountException(final String message, final Throwable cause) {
+        super(message, cause);
+    }
+
+}

@@ -24,9 +24,50 @@ public class PaymentController {
         final BaseResponse response;
 
         if (sharedKey.equalsIgnoreCase(key)) {
-            int userId = request.getUserId();
-            String itemId = request.getItemId();
-            double discount = request.getDiscount();
+            int currencyId = request.getCurrencyId();
+            String nameId = request.getNameId();
+            double balance = request.getBalance();
+            boolean treasury = request.getTreasury();
+            // Process the request
+            // ....
+            // Return success response to the client.
+            response = new BaseResponse(SUCCESS_STATUS, CODE_SUCCESS);
+        } else {
+            response = new BaseResponse(ERROR_STATUS, AUTH_FAILURE);
+        }
+        return response;
+    }
+
+    @PostMapping("/create")
+    public BaseResponse create(@RequestParam(value = "key") String key, @RequestBody PaymentRequest request) {
+
+        final BaseResponse response;
+
+        if (sharedKey.equalsIgnoreCase(key)) {
+            int currencyId = request.getCurrencyId();
+            String nameId = request.getNameId();
+            double balance = request.getBalance();
+            boolean treasury = request.getTreasury();
+            // Process the request
+            // ....
+            // Return success response to the client.
+            response = new BaseResponse(SUCCESS_STATUS, CODE_SUCCESS);
+        } else {
+            response = new BaseResponse(ERROR_STATUS, AUTH_FAILURE);
+        }
+        return response;
+    }
+
+    @PostMapping("/find")
+    public BaseResponse find(@RequestParam(value = "key") String key, @RequestBody PaymentRequest request) {
+
+        final BaseResponse response;
+
+        if (sharedKey.equalsIgnoreCase(key)) {
+            int currencyId = request.getCurrencyId();
+            String nameId = request.getNameId();
+            double balance = request.getBalance();
+            boolean treasury = request.getTreasury();
             // Process the request
             // ....
             // Return success response to the client.

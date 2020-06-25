@@ -2,31 +2,40 @@ package springbootrestservice;
 
 public class PaymentRequest {
 
-    private int userId;
-    private String itemId;
-    private double discount;
+    private int currencyId;
+    private String nameId;
+    private double balance;
+    private boolean treasury;
 
-    public String getItemId() {
-        return itemId;
+    public String getNameId() {
+        return nameId;
     }
 
-    public void setItemId(String itemId) {
-        this.itemId = itemId;
+    public void setNameId(String nameId) {
+        this.nameId = nameId;
     }
 
-    public double getDiscount() {
-        return discount;
+    public double getBalance() {
+        return balance;
     }
 
-    public void setDiscount(double discount) {
-        this.discount = discount;
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
-    public int getUserId() {
-        return userId;
+    public int getCurrencyId() {
+        return currencyId;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setCurrencyId(int currencyId) {
+        this.currencyId = currencyId;
+    }
+
+    public boolean getTreasury() {
+        return treasury;
+    }
+
+    public void setTreasury(boolean treasury) {
+        this.treasury = treasury;
     }
 }
