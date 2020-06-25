@@ -27,8 +27,8 @@ public class PaymentController {
         if (sharedKey.equalsIgnoreCase(key)) {
             Currency currencyId = request.getCurrencyId();
             String nameId = request.getNameId();
-            double balance = request.getBalance();
-            boolean treasury = request.getTreasury();
+            double balanceId = request.getBalanceId();
+            boolean treasuryId = request.getTreasuryId();
             // Process the request
             // ....
             // Return success response to the client.
@@ -47,8 +47,8 @@ public class PaymentController {
         if (sharedKey.equalsIgnoreCase(key)) {
             Currency currencyId = request.getCurrencyId();
             String nameId = request.getNameId();
-            double balance = request.getBalance();
-            boolean treasury = request.getTreasury();
+            double balanceId = request.getBalanceId();
+            boolean treasuryId = request.getTreasuryId();
             // Process the request
             // ....
             // Return success response to the client.
@@ -67,8 +67,8 @@ public class PaymentController {
         if (sharedKey.equalsIgnoreCase(key)) {
             Currency currencyId = request.getCurrencyId();
             String nameId = request.getNameId();
-            double balance = request.getBalance();
-            boolean treasury = request.getTreasury();
+            double balanceId = request.getBalanceId();
+            boolean treasuryId = request.getTreasuryId();
             // Process the request
             // ....
             // Return success response to the client.

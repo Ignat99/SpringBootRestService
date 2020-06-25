@@ -12,6 +12,7 @@ import javax.validation.constraints.PositiveOrZero;
 import java.math.BigDecimal;
 import java.util.Currency;
 
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -27,7 +28,16 @@ public class AccountRequest {
     @PositiveOrZero
     private BigDecimal initialBalance;
 
-    private Currency currency;
+//    @NotNull
+//    @Length(min = 2, max = 10)
+//    private Currency currency;
 
     private boolean treasury;
+    public boolean getTreasury() {
+            return treasury;
+    }
+    public void setTreasury(boolean treasury) {
+            this.treasury = treasury;
+    }
+
 }

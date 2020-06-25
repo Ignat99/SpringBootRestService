@@ -6,23 +6,23 @@ public class PaymentRequest {
 
     private Currency currencyId;
     private String nameId;
-    private double balance;
-    private boolean treasury;
+    private double balanceId;
+    private boolean treasuryId;
 
     public String getNameId() {
         return nameId;
     }
 
-    public void setNameId(String nameId) {
-        this.nameId = nameId;
+    public void setNameId(String name) {
+        this.nameId = name;
     }
 
-    public double getBalance() {
-        return balance;
+    public double getBalanceId() {
+        return balanceId;
     }
 
-    public void setBalance(double balance) {
-        this.balance = balance;
+    public void setBalanceId(double balance) {
+        this.balanceId = balance;
     }
 
     public Currency getCurrencyId() {
@@ -33,11 +33,11 @@ public class PaymentRequest {
         this.currencyId = currencyId;
     }
 
-    public boolean getTreasury() {
-        return treasury;
+    public boolean getTreasuryId() {
+        return treasuryId;
     }
 
-    public void setTreasury(boolean treasury) {
-        this.treasury = treasury;
+    public void setTreasuryId(boolean treasury) {
+        this.treasuryId = treasury;
     }
 }

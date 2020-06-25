@@ -13,6 +13,7 @@ import java.util.Currency;
 
 import static javax.persistence.GenerationType.AUTO;
 
+
 @Entity
 @Builder(toBuilder = true)
 @AllArgsConstructor(access = AccessLevel.PACKAGE)
@@ -30,9 +31,18 @@ public class Account extends BaseAuditEntity {
 
     private BigDecimal balance;
 
-    private Currency currency;
+//    private Currency currency;
 
     private boolean treasury;
+    public boolean getTreasury() {
+            return treasury;
+    }
+    public void setTreasury(boolean treasury) {
+            this.treasury = treasury;
+    }
+//    public boolean getTreasury() {
+//        return treasury;
+//    }
 
     @Version
     private Integer version;

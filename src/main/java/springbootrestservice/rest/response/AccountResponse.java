@@ -21,7 +21,8 @@ public class AccountResponse implements Serializable {
 
     private final BigDecimal currentBalance;
 
-    private Currency currency;
+//    private Currency currency;
 
     private boolean treasury;
+
 }

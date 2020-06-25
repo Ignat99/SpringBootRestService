@@ -7,9 +7,10 @@ import springbootrestservice.rest.response.AccountResponse;
 import lombok.NonNull;
 import org.springframework.stereotype.Component;
 
-/*                .cyrrency(from.getCurrency())
-                .treasury(from.getTreasury()) */
+import java.util.Currency;
 
+/*                .currency(Currency.getInstance("USD"))
+*/
 
 @Component
 public class AccountConverter implements Converter<Account, AccountResponse> {
@@ -20,6 +21,7 @@ public class AccountConverter implements Converter<Account, AccountResponse> {
                 .number(from.getId())
                 .name(from.getName())
                 .currentBalance(from.getBalance())
+                .treasury(from.getTreasury())
                 .build();
     }
 

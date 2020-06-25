@@ -6,6 +6,12 @@ import springbootrestservice.rest.request.AccountRequest;
 
 import lombok.NonNull;
 import org.springframework.stereotype.Component;
+import java.util.Currency;
+
+/*                .currency(Currency.getInstance("USD"))
+                .treasury(true)
+*/
+
 
 @Component
 public class AccountRequestConverter implements Converter<AccountRequest, Account> {
@@ -15,6 +21,7 @@ public class AccountRequestConverter implements Converter<AccountRequest, Accoun
         return Account.builder()
                 .name(from.getName())
                 .balance(from.getInitialBalance())
+                .treasury(from.getTreasury())
                 .build();
     }
 }

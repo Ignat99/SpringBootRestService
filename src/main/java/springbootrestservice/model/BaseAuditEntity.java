@@ -12,6 +12,7 @@ import javax.persistence.EntityListeners;
 import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.Currency;
 
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
@@ -28,4 +29,15 @@ abstract class BaseAuditEntity implements Serializable {
     @LastModifiedDate
     private LocalDateTime updatedAt;
 
+/*
+    @Column(name = "currency", nullable = false)
+    private Currency currency;
+    public Currency getCurrency() {
+            return currency;
+    }
+    public void setCurrency(Currency currency) {
+            this.currency = currency;
+    }
+*/
+//    private boolean treasury;
 }
