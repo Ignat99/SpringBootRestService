@@ -13,7 +13,20 @@
 
 This is a Spring Boot REST API with Swagger Documentation that uses Transactions and H2 as Database and Audit.
 
-Should	be	able	to	create,	access,	find	accounts	and	to	be	able	to	transfer	money	between	them.	 
+Should	be	able	to	
+
+create,	
+
+access,	
+
+```sh
+curl -i -X POST -H "Content-Type:application/json" -d '{  "treasury" : "true" , "currencyId" : 1, "nameId" : "abc", "balance" : 1000 }' http://localhost:8080/payment/pay?key=SHARED_KEY
+```
+
+find	accounts http://75.126.254.59:8080/accounts/10000 
+or http://75.126.254.59:8080/accounts ,
+
+and	to	be	able	to	transfer	money	between	them.	 
 
 An	account	seen	by	a	REST	client	has	the	following	details:	 
 
