@@ -18,7 +18,7 @@ Should	be	able	to
 - create:	
 
 ```sh
-curl -i -X POST -H "Content-Type:application/json" -d '{"number":30000,"name":"Dima","currentBalance":1000.00,"treasury":true}' http://localhost:8080/accounts
+curl -i -X POST -H "Content-Type:application/json" -d '{"number":30000,"name":"Sasha","currentBalance":1000.00, "currency":"USD", "treasury":true}' http://localhost:8080/accounts
 ```
 - access:	
 
