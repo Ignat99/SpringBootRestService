@@ -48,7 +48,7 @@ The	requirements	are	the	following:
 ## Technical Info
 
 The software was built using the following tools/platforms:
-- [IBM cloud](http://75.126.254.59:8080/accounts) - The Operational System that I use
+- [IBM cloud](http://75.126.254.59:8080/accounts) - with Linux Ubuntu Operational System
 - [Java 8](https://www.java.com/pt_BR/) - **THE PROGRAMMING LANGUAGE**
 - [Spring Boot 2.1.0](http://spring.io/projects/spring-boot) - The framework I use every day for building nice applications
 - [H2 Database](http://www.h2database.com/html/main.html) - Database that can be used as a library http://75.126.254.59:8080/h2
