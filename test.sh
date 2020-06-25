@@ -7,5 +7,8 @@ curl -i -X POST -H "Content-Type:application/json" -d '{"number":30000,"name":"M
 
 #curl -i -X POST -H "Content-Type:application/json" -d '{"sourceAccountNumber":10000, "targetAccountNumber":2,"amount":100.00}' http://localhost:8080/transfers
 
-curl -i -X POST -H "Content-Type:application/json" -d '{"sourceAccountNumber":10000, "targetAccountNumber":30000,"amount":10.00}' http://localhost:8080/transfers
+#curl -i -X POST -H "Content-Type:application/json" -d '{"sourceAccountNumber":10000, "targetAccountNumber":30000,"amount":10.00}' http://localhost:8080/transfers
+
+
+curl -i -X POST -H "Content-Type:application/json" -d '{"sourceAccountNumber":10000, "targetAccountNumber":30000,"amount":1100.00}' http://localhost:8080/transfers
 
