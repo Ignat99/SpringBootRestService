@@ -7,6 +7,8 @@ import springbootrestservice.rest.response.AccountResponse;
 import lombok.NonNull;
 import org.springframework.stereotype.Component;
 
+/*                .cyrrency(from.getCurrency())
+                .treasury(from.getTreasury()) */
 
 
 @Component

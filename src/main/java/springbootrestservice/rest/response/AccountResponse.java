@@ -7,6 +7,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Currency;
 
 @AllArgsConstructor
 @Data
@@ -20,4 +21,7 @@ public class AccountResponse implements Serializable {
 
     private final BigDecimal currentBalance;
 
+    private Currency currency;
+
+    private boolean treasury;
 }

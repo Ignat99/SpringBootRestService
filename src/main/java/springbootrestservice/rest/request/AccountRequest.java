@@ -10,6 +10,7 @@ import org.springframework.validation.annotation.Validated;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PositiveOrZero;
 import java.math.BigDecimal;
+import java.util.Currency;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -26,4 +27,7 @@ public class AccountRequest {
     @PositiveOrZero
     private BigDecimal initialBalance;
 
+    private Currency currency;
+
+    private boolean treasury;
 }

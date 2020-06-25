@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Version;
 import java.math.BigDecimal;
+import java.util.Currency;
 
 import static javax.persistence.GenerationType.AUTO;
 
@@ -28,6 +29,10 @@ public class Account extends BaseAuditEntity {
     private String name;
 
     private BigDecimal balance;
+
+    private Currency currency;
+
+    private boolean treasury;
 
     @Version
     private Integer version;

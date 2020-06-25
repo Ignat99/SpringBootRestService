@@ -1,8 +1,10 @@
 package springbootrestservice;
 
+import java.util.Currency;
+
 public class PaymentRequest {
 
-    private int currencyId;
+    private Currency currencyId;
     private String nameId;
     private double balance;
     private boolean treasury;
@@ -23,11 +25,11 @@ public class PaymentRequest {
         this.balance = balance;
     }
 
-    public int getCurrencyId() {
+    public Currency getCurrencyId() {
         return currencyId;
     }
 
-    public void setCurrencyId(int currencyId) {
+    public void setCurrencyId(Currency currencyId) {
         this.currencyId = currencyId;
     }
 

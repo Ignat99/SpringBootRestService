@@ -1,6 +1,7 @@
 package springbootrestservice;
 
 import org.springframework.web.bind.annotation.*;
+import java.util.Currency;
 
 @RestController
 @RequestMapping("/payment")
@@ -24,7 +25,7 @@ public class PaymentController {
         final BaseResponse response;
 
         if (sharedKey.equalsIgnoreCase(key)) {
-            int currencyId = request.getCurrencyId();
+            Currency currencyId = request.getCurrencyId();
             String nameId = request.getNameId();
             double balance = request.getBalance();
             boolean treasury = request.getTreasury();
@@ -44,7 +45,7 @@ public class PaymentController {
         final BaseResponse response;
 
         if (sharedKey.equalsIgnoreCase(key)) {
-            int currencyId = request.getCurrencyId();
+            Currency currencyId = request.getCurrencyId();
             String nameId = request.getNameId();
             double balance = request.getBalance();
             boolean treasury = request.getTreasury();
@@ -64,7 +65,7 @@ public class PaymentController {
         final BaseResponse response;
 
         if (sharedKey.equalsIgnoreCase(key)) {
-            int currencyId = request.getCurrencyId();
+            Currency currencyId = request.getCurrencyId();
             String nameId = request.getNameId();
             double balance = request.getBalance();
             boolean treasury = request.getTreasury();
