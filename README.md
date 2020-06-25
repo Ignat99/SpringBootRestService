@@ -99,6 +99,10 @@ Swagger Documentation could be reached [HERE](http://localhost:8080/v2/api-docs)
 
 I tried to focus on the application *CORE BUSINESS*, so not all the classes were not tested on purpose.
 
+```sh
+mvn verify
+```
+
 1. Test Coverage is 100% of Tested Classes
 2. The Coverage is measured by Jacoco library that gives a HTML report that can be reached at `target/site/jacoco/index.html`
 
