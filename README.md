@@ -32,7 +32,8 @@ or http://75.126.254.59:8080/accounts
 - and	to	be	able	to	transfer	money	between	them: http://75.126.254.59:8080/transfers/10000
 
 ```sh
-curl -i -X POST -H "Content-Type:application/json" -d '{"sourceAccountNumber":10000, "targetAccountNumber":1,"amount":100.00}' http://localhost:8080/transfers
+curl -i -X POST -H "Content-Type:application/json" -d '{"number":30000,"name":"Maxim","currentBalance":1000.00,"treasury":false}' http://localhost:8080/accounts
+curl -i -X POST -H "Content-Type:application/json" -d '{"sourceAccountNumber":10000, "targetAccountNumber":30000,"amount":10.00}' http://localhost:8080/transfers
 ```
 
 An	account	seen	by	a	REST	client	has	the	following	details:	 
