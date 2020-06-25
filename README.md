@@ -29,7 +29,9 @@ curl -i -X POST -H "Content-Type:application/json" -d '{  "treasury" : "true" , 
 - find	accounts: http://75.126.254.59:8080/accounts/10000 
 or http://75.126.254.59:8080/accounts 
 
-- and	to	be	able	to	transfer	money	between	them.	 
+- and	to	be	able	to	transfer	money	between	them: http://75.126.254.59:8080/transfers/10000
+or http://75.126.254.59:8080/transfers
+
 
 An	account	seen	by	a	REST	client	has	the	following	details:	 
 
