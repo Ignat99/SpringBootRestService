@@ -1,3 +1,4 @@
+INSERT INTO ACCOUNT VALUES (30000, systimestamp, systimestamp, 1000, 'Maxim', FALSE, 0);
 INSERT INTO ACCOUNT VALUES (10000, systimestamp, systimestamp, 1000, 'Felipe', TRUE, 0);
 INSERT INTO ACCOUNT VALUES (20000, systimestamp, systimestamp, 1000, 'Monique', TRUE, 0);
 
