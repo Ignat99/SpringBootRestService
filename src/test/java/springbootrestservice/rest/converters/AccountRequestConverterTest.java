@@ -7,10 +7,8 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.junit.MockitoJUnitRunner;
 
-/*
-import java.util.Currency;
-*/
 
+import java.util.Currency;
 import static java.math.BigDecimal.TEN;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -25,19 +23,18 @@ public class AccountRequestConverterTest {
         target.convert(null);
     }
 
-/*
-        Currency c1 = Currency.getInstance("USD");
-        final AccountRequest accountRequest = new AccountRequest("Dummy", TEN, c1, true);
-*/
 
     @Test
     public void convert() {
-        final AccountRequest accountRequest = new AccountRequest("Dummy", TEN, true);
+//        final AccountRequest accountRequest = new AccountRequest("Dummy", TEN, true);
+        Currency c1 = Currency.getInstance("USD");
+        final AccountRequest accountRequest = new AccountRequest("Dummy", TEN, c1, true);
 
         final Account result = target.convert(accountRequest);
 
-        final Account expectedAccount = Account.builder().treasury(true).balance(TEN).name("Dummy").build();
+        final Account expectedAccount = Account.builder().treasury(true).currency(c1).balance(TEN).name("Dummy").build();
 
         assertThat(result).isEqualTo(expectedAccount);
     }
+
 }

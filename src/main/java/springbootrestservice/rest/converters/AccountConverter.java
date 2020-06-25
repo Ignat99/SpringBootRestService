@@ -9,8 +9,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Currency;
 
-/*                .currency(Currency.getInstance("USD"))
-*/
+
 
 @Component
 public class AccountConverter implements Converter<Account, AccountResponse> {
@@ -21,6 +20,7 @@ public class AccountConverter implements Converter<Account, AccountResponse> {
                 .number(from.getId())
                 .name(from.getName())
                 .currentBalance(from.getBalance())
+                .currency(from.getCurrency())
                 .treasury(from.getTreasury())
                 .build();
     }

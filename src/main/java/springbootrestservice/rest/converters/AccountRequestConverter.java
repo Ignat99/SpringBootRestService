@@ -21,6 +21,7 @@ public class AccountRequestConverter implements Converter<AccountRequest, Accoun
         return Account.builder()
                 .name(from.getName())
                 .balance(from.getInitialBalance())
+                .currency(from.getCurrency())
                 .treasury(from.getTreasury())
                 .build();
     }

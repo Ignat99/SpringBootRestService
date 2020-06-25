@@ -31,7 +31,13 @@ public class Account extends BaseAuditEntity {
 
     private BigDecimal balance;
 
-//    private Currency currency;
+    private Currency currency;
+    public Currency getCurrency() {
+        return currency;
+    }
+    public void setCurrency(Currency currency) {
+            this.currency = currency;
+    }
 
     private boolean treasury;
     public boolean getTreasury() {
@@ -40,9 +46,6 @@ public class Account extends BaseAuditEntity {
     public void setTreasury(boolean treasury) {
             this.treasury = treasury;
     }
-//    public boolean getTreasury() {
-//        return treasury;
-//    }
 
     @Version
     private Integer version;
