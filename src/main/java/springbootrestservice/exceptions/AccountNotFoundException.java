@@ -1,4 +1,4 @@
-package springbootrestservice;
+package springbootrestservice.exceptions;
 
 public class AccountNotFoundException extends RuntimeException {
 
